@@ -3,23 +3,119 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_activity">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.ngiu.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_activity"
+        android:name="com.example.ngiu.ui.activity.ActivityFragment"
+        android:label="@string/nav_bottom_activity"
+        tools:layout="@layout/fragment_activity" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.ngiu.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_account"
+        android:name="com.example.ngiu.ui.account.AccountFragment"
+        android:label="@string/nav_bottom_account"
+        tools:layout="@layout/fragment_account" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.ngiu.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_add_account"
+        android:name="com.example.ngiu.ui.account.addaccounts.AddAccountFragment"
+        android:label="@string/nav_bottom_account"
+        tools:layout="@layout/fragment_account_add_account" >
+        <action
+            android:id="@+id/action_navigation_add_account_self"
+            app:destination="@id/navigation_add_account" />
+        <action
+            android:id="@+id/action_navigation_add_account_to_addCreditFragment"
+            app:destination="@id/addCreditFragment" />
+        <action
+            android:id="@+id/action_navigation_add_account_to_addCashFragment"
+            app:destination="@id/addCashFragment" />
+        <action
+            android:id="@+id/action_navigation_add_account_to_addDebitFragment"
+            app:destination="@id/addDebitFragment" />
+        <action
+            android:id="@+id/action_navigation_add_account_to_addPermanentAssetFragment"
+            app:destination="@id/addPermanentAssetFragment" />
+        <action
+            android:id="@+id/action_navigation_add_account_to_addVirtualAccountFragment"
+            app:destination="@id/addVirtualAccountFragment" />
+        <action
+            android:id="@+id/action_navigation_add_account_to_addWebAccountFragment"
+            app:destination="@id/addWebAccountFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_calender"
+        android:name="com.example.ngiu.ui.calendar.CalendarFragment"
+        android:label="@string/nav_bottom_calendar"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.example.ngiu.ui.setting.SettingFragment"
+        android:label="@string/nav_bottom_setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/navigation_record"
+        android:name="com.example.ngiu.ui.record.RecordFragment"
+        tools:layout="@layout/fragment_record" />
+
+    <fragment
+        android:id="@+id/navigation_category_manage"
+        android:name="com.example.ngiu.ui.category.CategoryManagerFragment"
+        tools:layout="@layout/fragment_category_manage" />
+
+    <fragment
+        android:id="@+id/add_cash"
+        android:name="com.example.ngiu.ui.record.RecordFragment"
+        tools:layout="@layout/fragment_record" />
+    <fragment
+        android:id="@+id/addCashFragment"
+        android:name="com.example.ngiu.ui.account.addaccounts.AddCashFragment"
+        android:label="AddCashFragment" />
+    <fragment
+        android:id="@+id/addCreditFragment"
+        android:name="com.example.ngiu.ui.account.addaccounts.AddCreditFragment"
+        android:label="AddCreditFragment" />
+    <fragment
+        android:id="@+id/addDebitFragment"
+        android:name="com.example.ngiu.ui.account.addaccounts.AddDebitFragment"
+        android:label="AddDebitFragment" />
+    <fragment
+        android:id="@+id/addPermanentAssetFragment"
+        android:name="com.example.ngiu.ui.account.addaccounts.AddPermanentAssetFragment"
+        android:label="AddPermanentAssetFragment" />
+    <fragment
+        android:id="@+id/addVirtualAccountFragment"
+        android:name="com.example.ngiu.ui.account.addaccounts.AddWebAccountFragment"
+        android:label="AddVirtualAccountFragment" />
+    <fragment
+        android:id="@+id/addWebAccountFragment"
+        android:name="com.example.ngiu.ui.account.addaccounts.AddWebAccountFragment"
+        android:label="AddWebAccountFragment" />
+    <fragment
+        android:id="@+id/navigation_mpp_manage"
+        android:name="com.example.ngiu.ui.setting.mppmanage.MPPManagerFragment"
+        tools:layout="@layout/fragment_merchant_person_project_manage" />
+    <fragment
+        android:id="@+id/accountCreditRecords"
+        android:name="com.example.ngiu.ui.account.AccountCreditDetailFragment"
+        android:label="fragment_account_credit_records"
+        tools:layout="@layout/fragment_account_credit_records" />
+    <fragment
+        android:id="@+id/accountRecords"
+        android:name="com.example.ngiu.ui.account.detail.AccountGeneralDetailFragment"
+        android:label="fragment_account_general_detail"
+        tools:layout="@layout/fragment_account_general_detail" />
+    <fragment
+        android:id="@+id/accountRecordsPR"
+        android:name="com.example.ngiu.ui.account.detail.AccountPRDetailFragment"
+        android:label="fragment_account_p_r_detail"
+        tools:layout="@layout/fragment_account_p_r_detail" />
+
+
+
 </navigation>
